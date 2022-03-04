@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dimen_marginRecycler">60dp</dimen>
+    <dimen name="recycler_padding">6dp</dimen>
+    <dimen name="dime_a16">16dp</dimen>
+    <dimen name="dimen_padding_16">16dp</dimen>
+    <dimen name="layout_marginstart">16dp</dimen>
+    <dimen name="layout_margin_top">16dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="padding_bottom">8dp</dimen>
+    <dimen name="width">24dp</dimen>
+    <dimen name="length24">24dp</dimen>
+    <dimen name="layout_margin_right">32dp</dimen>
+</resources>

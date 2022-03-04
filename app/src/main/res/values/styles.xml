@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="linear_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">@dimen/dimen_padding_16</item>
+        <item name="android:paddingTop">@dimen/padding_bottom</item>
+        <item name="android:paddingRight">@dimen/dimen_padding_16</item>
+        <item name="android:paddingBottom">@dimen/padding_bottom</item>
+    </style>
+
+    <style name="textviewstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="imagestyle">
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">27dp</item>
+        <item name="android:layout_marginRight">@dimen/dimen_32</item>
+    </style>
+</resources>

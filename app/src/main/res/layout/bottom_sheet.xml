@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#F6F2F2"
+    android:orientation="horizontal"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/dimen_32"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="16dp">
+    <!--    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">-->
+
+
+    <EditText
+        android:id="@+id/enter_todo_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dime_a16"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="@string/hint_bottom_sheet"
+        android:inputType="textPersonName"
+        android:padding="@dimen/dimen_padding_16"
+        app:layout_constraintBottom_toTopOf="@+id/today_calendar_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/save_todo_button"
+        android:layout_width="77dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toBottomOf="@+id/today_calendar_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/priority_todo_buttton"
+        app:layout_constraintTop_toBottomOf="@+id/enter_todo_et"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_done_24" />
+
+    <ImageButton
+        android:id="@+id/today_calendar_button"
+        android:layout_width="77dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#EFE9E9"
+        app:layout_constraintEnd_toStartOf="@+id/priority_todo_buttton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_todo_et"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/priority_todo_buttton"
+        android:layout_width="77dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="#DFCFD4"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup_priority"
+        app:layout_constraintEnd_toStartOf="@+id/save_todo_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/today_calendar_button"
+        app:layout_constraintTop_toBottomOf="@+id/enter_todo_et"
+        app:srcCompat="@drawable/ic_baseline_flag_24" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_due"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority_todo_buttton"
+        tools:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radioButton_high"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F40A0A"
+            android:text="@string/radio_button_high" />
+
+        <RadioButton
+            android:id="@+id/radioButtom_med"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEB3B"
+            android:text="@string/radio_button_medium" />
+
+        <RadioButton
+            android:id="@+id/radioButton_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#06FB10"
+            android:text="@string/radio_button_row" />
+    </RadioGroup>
+
+    <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="388dp"
+        android:layout_height="272dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextweek_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/tomorrow_chip"
+        android:layout_width="269dp"
+        android:layout_height="41dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_tomorrow"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:chipIcon="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:chipIconTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="@+id/nextweek_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/nextweek_chip"
+        app:layout_constraintTop_toBottomOf="@+id/today_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/today_chip"
+        android:layout_width="269dp"
+        android:layout_height="41dp"
+        android:layout_margin="16dp"
+        android:text="@string/text_today"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:chipIcon="@drawable/ic_baseline_today_24"
+        app:chipIconTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="@+id/tomorrow_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tomorrow_chip"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_due"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/nextweek_chip"
+        android:layout_width="269dp"
+        android:layout_height="41dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginStart="126dp"
+        android:text="@string/next_week"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:chipIcon="@drawable/ic_baseline_airline_stops_24"
+        app:chipIconTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tomorrow_chip" />
+
+    <TextView
+        android:id="@+id/text_view_due"
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="221dp"
+        android:gravity="center_horizontal"
+        android:text="@string/text_view"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_priority" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/calendar_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="411dp"
+        app:constraint_referenced_ids="nextweek_chip,today_chip,tomorrow_chip,calendar_view,text_view_due"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

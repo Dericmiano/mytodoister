@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+
+    <LinearLayout
+        style="@style/linear_style"
+        android:minHeight="48dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            style="@style/imagestyle"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/textviewstyle"
+            android:text="@string/text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/imagestyle"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginRight="@dimen/layout_margin_right"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/textviewstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            style="@style/imagestyle"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:srcCompat="@drawable/ic_baseline_airline_stops_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/textviewstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_link_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            style="@style/imagestyle"
+            app:srcCompat="@drawable/ic_baseline_content_copy_24" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/textviewstyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/make_a_copy_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            style="@style/imagestyle"
+            app:srcCompat="@drawable/ic_baseline_email_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/textviewstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_bottom"
+            android:text="@string/email_text" />
+    </LinearLayout>
+
+</LinearLayout>

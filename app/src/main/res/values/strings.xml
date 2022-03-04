@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MY TODOISTER</string>
+    <string name="action_settings">About</string>
+    <string name="todo_fab">TODO</string>
+    <string name="hint_bottom_sheet">e.g Enter Learning React</string>
+    <string name="radio_button_high">HIGH</string>
+    <string name="radio_button_medium">medium</string>
+    <string name="radio_button_row">row</string>
+    <string name="text_view">Due date</string>
+    <string name="text_today">Today</string>
+    <string name="empty_text">empty task can,t enter</string>
+    <string name="next_week">next week</string>
+    <string name="text_tomorrow">Tomorrow</string>
+    <string name="today">today</string>
+    <string name="text">Preview</string>
+    <string name="share_text">share</string>
+    <string name="get_link_text">get link</string>
+    <string name="make_a_copy_text">Make a copy</string>
+    <string name="email_text">Send us an email</string>
+    <string name="about">MY TODOISTER PROJECT VERSION 1.0000</string>
+    <string name="empty_string">empty task can not proceed</string>
+</resources>
